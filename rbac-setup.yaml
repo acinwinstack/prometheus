@@ -3,7 +3,7 @@ kind: ClusterRole
 metadata:
   name: prometheus
 rules:
-- apiGroups: [""]
+- apiGroups: ["*"]
   resources:
   - nodes
   - nodes/proxy
