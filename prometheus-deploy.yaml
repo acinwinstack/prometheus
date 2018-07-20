@@ -16,11 +16,14 @@ spec:
     port: 9090
     nodePort: 30008
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: prometheus-deployment
 spec:
+  selector:
+    matchLabels:
+      app: prometheus-server
   replicas: 1
   template:
     metadata:
